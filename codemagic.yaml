@@ -1,0 +1,15 @@
+workflows:
+  ios-workflow:
+    name: iOS IPA Build
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      - flutter pub get
+      - flutter build ios --release --no-codesign
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      app_store_connect:
+        apple_id: tu@email.com
