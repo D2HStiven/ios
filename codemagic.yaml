@@ -12,4 +12,4 @@ workflows:
       - build/ios/ipa/*.ipa
     publishing:
       app_store_connect:
-        apple_id: tu@email.com
+        apple_id: cifuentiven@gmail.com
